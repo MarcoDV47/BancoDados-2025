@@ -11,10 +11,10 @@ JOIN matricula m ON mo.`id-matricula` = m.id
 JOIN endereco e ON mo.`id-endereco` = e.id;
 
 /* Obter os cargos ocupados por funcionário */
-SELECT m.id AS matricula_id, c.cargo, co.`data-inicio`, co.`data-fim`
-FROM `cargos-ocupados` co
-JOIN matricula m ON co.`id-matricula` = m.id
-JOIN cargo c ON co.`id-cargo` = c.id;
+SELECT m.id AS matricula_id, c.cargo, co.data_inicio, co.`data_fim`
+FROM `cargos_ocupados` co
+JOIN matricula m ON co.`id_matricula` = m.id
+JOIN cargo c ON co.`id_cargo` = c.id;
 
 /* Obter departamento dos funcionários */
 SELECT m.id AS matricula_id, d.nome AS departamento, dl.data_inicio, dl.data_fim
